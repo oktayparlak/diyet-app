@@ -7,7 +7,7 @@ const Product = require('../models/Product');
 const DietMenu = require('../models/DietMenu');
 
 exports.getIndex = async (req, res) => {
-  const posts = await Post.findAll();
+  const posts = await Post.findAll({ include: [User] });
   return res.render('index', { path: '/', posts: posts, isLoggedIn: req.session.isLoggedIn });
 };
 
@@ -123,7 +123,6 @@ exports.postCreatePost = async (req, res) => {
   }
   let uploadedImage = req.files.foto;
   let uploadPath = __dirname + '../../../public/uploads/' + uploadedImage.name;
-  console.log(uploadPath);
   const { title, content } = req.body;
 
   uploadedImage.mv(uploadPath, async () => {

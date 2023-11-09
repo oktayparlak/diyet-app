@@ -18,7 +18,7 @@
 								<span class="cat-name text-color font-extra text-sm text-uppercase letter-spacing-1">POST</span>
 								<h3 class="post-title mt-1"><a href="/posts/<%= posts[i].id %>"><%= posts[i].title %></a></h3>
 
-								<span class="text-muted letter-spacing text-uppercase font-sm"><%= posts[i].createdAt %></span>
+								<span class="text-muted letter-spacing text-uppercase font-sm" style="font-weight: bold;"><%= posts[i].User.firstName %> <%= posts[i].User.lastName %></span>
 
 							</article>
 						</div>

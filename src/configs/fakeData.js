@@ -129,7 +129,7 @@ module.exports = () => {
       yag: 0.2,
     },
     {
-      isim: 'Domuz Pirzola',
+      isim: 'Dana Pirzola',
       kalori: 189,
       protein: 24,
       karbonhidrat: 0,

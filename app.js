@@ -8,7 +8,7 @@ const initAssociations = require('./src/models/index');
 const initFakeData = require('./src/configs/fakeData');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 /** Template Engine */
 app.set('view engine', 'ejs');
@@ -46,3 +46,8 @@ sequelize.sync({ force: true }).then(() => {
     console.log(`Server listening on port ${PORT}`);
   });
 });
+
+/**
+ * 1. dotenv
+ * 2. rate-limit
+ */

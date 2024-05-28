@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize(process.env.DB_URI, {
+const sequelize = new Sequelize('postgresql://postgres:123456@localhost:5432/diyetapp', {
   logging: false,
 });
 

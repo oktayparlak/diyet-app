@@ -1,7 +1,6 @@
 const express = require('express');
 const session = require('express-session');
 const fileUpload = require('express-fileupload');
-require('dotenv').config();
 
 const sequelize = require('./src/configs/database');
 const routes = require('./src/routes/index');
@@ -38,7 +37,7 @@ initAssociations();
 /** Routes */
 routes(app);
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   console.log('Database connected!');
   /** Fake Data */
   // initFakeData();
